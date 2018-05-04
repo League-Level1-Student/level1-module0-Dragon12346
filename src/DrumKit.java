@@ -22,7 +22,7 @@ public class DrumKit implements MouseListener {
 
 	JLabel drumLabelWithImage;
 	JLabel drumLabelWithImagethesecond;
-
+	JLabel drumLabelWithImagethethird;
 	public static void main(String[] args) throws Exception {
 		new DrumKit().getGoing();
 	}
@@ -52,22 +52,28 @@ public class DrumKit implements MouseListener {
 		String qazwsxedc = "cymbal.jpg";
 		drumLabelWithImagethesecond = createLabelImage(qazwsxedc);
 
-		qwertyuiop.add(drumLabelWithImagethesecond);
-		qwertyuiop.pack();
-		// 9. Edit the next line to use your String variable
-		//
+		asdfghjkl.add(drumLabelWithImagethesecond);
 
+		// 9. Edit the next line to use your String variable
+		String qsc = "snare.jpg";
+		drumLabelWithImagethethird = createLabelImage(qsc);
+
+
+
+		asdfghjkl.add(drumLabelWithImagethethird);
 		// 10. Add the image to the panel
 
 		// 11. Set the layout of the panel to "new GridLayout()"
 		asdfghjkl.setLayout(new GridLayout());
 		qwertyuiop.pack();
-
+	
 		// 12. call the pack() method on the frame. Run your program. Do you see your
 		// drum image?
 
 		// 13. add this mouse listener to drumLabelWithImage
 		drumLabelWithImage.addMouseListener(this);
+		drumLabelWithImagethesecond.addMouseListener(this);
+		drumLabelWithImagethethird.addMouseListener(this);
 		// 18. Add more images to make a drumkit. Remember to add this mouse listener to
 		// each one.
 

@@ -29,16 +29,65 @@ public class BodyPartQuiz {
 
 
 	private void startQuiz() {
-
+		int score = 0;
+		initializeGui();
+		
 		// 1. Make an int variable to hold the score.
 
 		// 2. Set the size of the window in the initializeGui() method below
 
-		for (int i = 0; i < 4; i++) {
-			
+		
 			// 4. Ask the user who this person is and store their answer
-			String guess= JOptionPane.showInputDialog("who is this?");
-			
+
+		String guess= JOptionPane.showInputDialog("who is this?");
+		guess.toLowerCase();
+		if (guess.equals("arnold")) {
+			JOptionPane.showMessageDialog(null, "Correct");
+			score = score+1;
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "Incorrect");
+		}
+		showNextImage();
+		JOptionPane.showMessageDialog(null, score);
+		
+		String guesss= JOptionPane.showInputDialog("who is this?");
+		guesss.toLowerCase();
+		if (guesss.equals("leonardo")) {
+			JOptionPane.showMessageDialog(null, "Correct");
+			score = score+1;
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "Incorrect");
+		}
+		showNextImage();
+		JOptionPane.showMessageDialog(null, score);
+		
+		String guessss= JOptionPane.showInputDialog("who is this?");
+		guessss.toLowerCase();
+		if (guessss.equals("morgan")) {
+			JOptionPane.showMessageDialog(null, "Correct");
+			score = score+1;
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "Incorrect");
+		}
+		showNextImage();
+		JOptionPane.showMessageDialog(null, score);
+		
+		String guesssss= JOptionPane.showInputDialog("who is this?");
+		guesssss.toLowerCase();
+		if (guesssss.equals("jack")) {
+			JOptionPane.showMessageDialog(null, "Correct");
+			score = score+1;
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "Incorrect");
+		}
+		JOptionPane.showMessageDialog(null, score);
+		
+		
+
 			// 5. Check their answer. If they guessed correctly:
 			// -- Tell them they are right and increase the score by 1
 
@@ -46,13 +95,13 @@ public class BodyPartQuiz {
 			// -- Tell them they are wrong and who the person is
 
 			// 7. Use the showNextImage() method below to get the next image
-			showNextImage();
+
 		    // 8. Show them their current score
 			
 			// 9. .... repeat for all your images.....
 
 
-		}
+		
 
 	}
 

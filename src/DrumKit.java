@@ -27,7 +27,7 @@ public class DrumKit implements MouseListener {
 		new DrumKit().getGoing();
 	}
 
-	private void getGoing() throws MalformedURLException {
+	void getGoing() throws MalformedURLException {
 		// 1. Make a JFrame variable and initialize it using "new JFrame()"
 		JFrame qwertyuiop = new JFrame();
 		qwertyuiop.setVisible(true);

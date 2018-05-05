@@ -1,3 +1,4 @@
+
 /*
  *    Copyright (c) The League of Amazing Programmers 2013-2017
  *    Level 1
@@ -12,23 +13,31 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class DuelingButtons implements ActionListener {
-	
+
 	public static void main(String[] args) {
 		new DuelingButtons().createUI();
 	}
 
 	JButton leftButton = new JButton();
 	JButton rightButton = new JButton();
-	
-	Dimension BIG = new Dimension(400,400);
-	Dimension SMALL = new Dimension(200,200);
-	
+
+	Dimension BIG = new Dimension(400, 400);
+	Dimension SMALL = new Dimension(200, 200);
+
 	JFrame frame = new JFrame();
 	JPanel panel = new JPanel();
 
 	private void createUI() {
 		// 1. Add the panel to the frame
-
+		frame.add(panel);
+		frame.setVisible(true);
+		panel.add(leftButton);
+		panel.add(rightButton);
+		rightButton.setText("Click me!");
+		leftButton.setText("Click me!");
+		leftButton.addActionListener(this);
+		rightButton.addActionListener(this);
+		frame.setTitle("Demanding Buttons");
 		// 2. Make the frame visible
 
 		// 3. Set the text of the leftButton to "Click me!"
@@ -46,26 +55,34 @@ public class DuelingButtons implements ActionListener {
 		// 9. Pack the frame
 
 		// 10. Set the title of the frame to "Demanding Buttons"
+		frame.pack();
 
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		JButton buttonPressed = (JButton) arg0.getSource();
-		
-		
-		/* If the buttonPressed was the leftButton....*/
-			// Set the text of the rightButton to "No, click Me!"
-			// Set the PREFERRED size of the rightButton to BIG
-			// Set the text of the leftButton to "Click Me!"
-			// Set the PREFERRED size of the leftButton to SMALL
-		
-		
+
+		if (buttonPressed == leftButton) {
+			rightButton.setText("No! Click me!");
+			rightButton.setPreferredSize(BIG);
+			leftButton.setPreferredSize(SMALL);
+
+		}
+		if (buttonPressed == rightButton) {
+			leftButton.setText("No! Click me!");
+			rightButton.setPreferredSize(SMALL);
+			leftButton.setPreferredSize(BIG);
+		}
+
+		/* If the buttonPressed was the leftButton.... */
+		// Set the text of the rightButton to "No, click Me!"
+		// Set the PREFERRED size of the rightButton to BIG
+		// Set the text of the leftButton to "Click Me!"
+		// Set the PREFERRED size of the leftButton to SMALL
+
 		/* If the buttonPressed was the rightButton, do the opposite. */
-		
 
 		frame.pack();
 	}
 }
-
-

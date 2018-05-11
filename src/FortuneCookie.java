@@ -46,7 +46,7 @@ public class FortuneCookie implements ActionListener {
 			JOptionPane.showMessageDialog(null, "Something bad will happen to your house");
 		}
 		if (rand==3) {
-			JOptionPane.showMessageDialog(null, "Something good will happento your house");
+			JOptionPane.showMessageDialog(null, "Something good will happen to your house");
 		}
 		if (rand==4) {
 			JOptionPane.showMessageDialog(null, "Something bad will happen if you keep eating fortune cookies!");
